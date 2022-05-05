@@ -56,8 +56,7 @@ export default class Index
                 <input type="text" value={this.state.QuantityPerson} onChange={(e) => this.setState({ QuantityPerson: e.target.value })}/>
                 <br />
                 <br />
-                <button type="button" onClick={this.calculate(i)}>Calcular</button>
-
+                <button type="button" onClick={() => this.calculate()}>Calcular</button>
                 <button type="button" onClick={this.clearFields}>Zerar</button>      
                 <hr />
                 <br />
