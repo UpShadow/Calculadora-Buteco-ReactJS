@@ -2,7 +2,7 @@
 
 namespace Calculadora_Buteco_ReactJS.Controllers
 {
-    public class HomeController : Controller
+    public class CalcButecoController : Controller
     {
         public IActionResult Index()
         {

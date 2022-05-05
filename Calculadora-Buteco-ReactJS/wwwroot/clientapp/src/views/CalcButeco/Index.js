@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
 export default class Index
     extends React.Component
 {
@@ -9,73 +8,57 @@ export default class Index
         super(props);
 
         this.state = {
-            item: "",
-            itens: [],
-            indexEdicao: -1
+            AccountValue: "",
+            Tip: "",
+            QuantityPerson: "",
+            TipValue: "",
+            TotalPay: "",
+            TotalPayPerPerson: ""
         }
 
     }
 
-    adicionar = () => {
-
-        let itensAux = this.state.itens;
-
-        if (this.state.indexEdicao == -1)
-            itensAux.push(this.state.item);
-        else {
-            itensAux[this.state.indexEdicao] = this.state.item;
-        }
-
+    calculate = () => {
+        let TipCalculation = (this.state.Tip * this.state.AccountValue) / 100; //realiza o calculo da gorjeta
+        let TotalPayCalculation = AccountValue + TipCalculation; //soma o valor da conta + o valor da gorjeta
+        let PayPerPersonCalculation = TotalPayCalculation / QuantityPerson;
 
         this.setState({
-            indexEdicao: -1,
-            item: "",
-            itens: itensAux
+            //TipValue: (this.state.Tip * this.state.AccountValue) / 100;
+            TipValue: TipCalculation,
+            TotalPay: TotalPayCalculation,
+            TotalPayPerPerson: PayPerPersonCalculation
         });
     }
 
-    zerar = (i) => {
-
+    clearFields = (i) => {
+        this.setState({
+            AccountValue: "",
+            Tip: "",
+            QuantityPerson: ""
+        })
     }
 
     render = () => {
-
-
-        /*let linhas = [];
-        this.state.itens.forEach(i => {
-            linhas.push(<tr><td>{i}</td></tr>);
-        });*/
-
-
         let saida =
             <>
-                <input type="text"
-                    value={this.state.item}
-                    onChange={(e) => this.setState({ item: e.target.value })}
-                />
-                <button type="button"
-                    onClick={this.adicionar}>+</button>
+                <h2>Calculadora de Buteco</h2>
+                <br />
+                <p>Conta</p>
+                <input type="text" value={this.state.AccountValue} onChange={(e) => this.setState({ AccountValue: e.target.value })}/>
                 <br />
                 <br />
+                <p>Gorjeta</p>
+                <input type="number" value={this.state.Tip} onChange={(e) => this.setState({ Tip: e.target.value })}/>
                 <br />
-                <table>
-                    {this.state.itens.map(i => {
-                        return (
-                            <tr>
-                                <td>{i}</td>
-                                <td>
-                                        <button type="button"
-                                        onClick={() => this.excluir(i)}>X</button>
-                                </td>
-                                <td>
-                                    <button type="button"
-                                        onClick={() => this.editar(i)}>E</button>
-                                </td>
-                            </tr>)
-                    })}
-                </table>
+                <br />
+                <p>Quantidade de Pessoas</p>
+                <input type="text" value={this.state.QuantityPerson} onChange={(e) => this.setState({ QuantityPerson: e.target.value })}/>
+                <br />
+                <br />
+                <button type="button" onClick={this.calculate}>Calcular</button>
+                <button type="button" onClick={this.clearFields}>Zerar</button>      
             </>
-       
         return saida;
     }
 }

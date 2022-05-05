@@ -7,4 +7,8 @@
     <RootNamespace>Calculadora_Buteco_ReactJS</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\CalcButeco\Privacy.cshtml" />
+  </ItemGroup>
+
 </Project>
