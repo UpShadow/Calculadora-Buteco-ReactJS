@@ -19,9 +19,9 @@ export default class Index
     }
 
     calculate = () => {
-        let TipCalculation = (this.state.Tip * this.state.AccountValue) / 100; //realiza o calculo da gorjeta
-        let TotalPayCalculation = AccountValue + TipCalculation; //soma o valor da conta + o valor da gorjeta
-        let PayPerPersonCalculation = TotalPayCalculation / QuantityPerson;
+        let TipCalculation = (parseInt(this.state.Tip) * parseFloat(this.state.AccountValue)) / 100; //realiza o calculo da gorjeta
+        let TotalPayCalculation = parseFloat(this.state.AccountValue) + TipCalculation; //soma o valor da conta + o valor da gorjeta
+        let PayPerPersonCalculation = TotalPayCalculation / parseInt(this.state.QuantityPerson);
 
         this.setState({
             //TipValue: (this.state.Tip * this.state.AccountValue) / 100;
@@ -56,8 +56,14 @@ export default class Index
                 <input type="text" value={this.state.QuantityPerson} onChange={(e) => this.setState({ QuantityPerson: e.target.value })}/>
                 <br />
                 <br />
-                <button type="button" onClick={this.calculate}>Calcular</button>
+                <button type="button" onClick={this.calculate(i)}>Calcular</button>
+
                 <button type="button" onClick={this.clearFields}>Zerar</button>      
+                <hr />
+                <br />
+                <p> Gorjeta: {this.state.TipValue}</p>
+                <p> Total a pagar: {this.state.TotalPay}</p>
+                <p> Total a pagar por pessoa: {this.state.TotalPayPerPerson}</p>
             </>
         return saida;
     }
