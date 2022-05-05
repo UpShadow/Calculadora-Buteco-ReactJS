@@ -15,12 +15,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\GitHub\Calculadora-Buteco-ReactJS\Calculadora-Buteco-ReactJS
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GitHub/Calculadora-Buteco-ReactJS/Calculadora-Buteco-ReactJS/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/GitHub/Calculadora-Buteco-ReactJS/Calculadora-Buteco-ReactJS/Views/CalcButeco/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY0J1dGVjb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/Calculadora-Buteco-ReactJS/Calculadora-Buteco-ReactJS/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/GitHub/Calculadora-Buteco-ReactJS/Calculadora-Buteco-ReactJS/Views/CalcButeco/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY0J1dGVjb1xQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/GitHub/Calculadora-Buteco-ReactJS/Calculadora-Buteco-ReactJS/Views/Shared/Error.cshtml]
