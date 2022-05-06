@@ -1,2 +1,2 @@
 # Calculadora-Buteco-ReactJS
- Simple calculator in Reactjs - Faculty Exercise
+ Simple calculator in Reactjs - University Exercise
